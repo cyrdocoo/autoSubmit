@@ -19,7 +19,7 @@ func Ft(key string, title string, username string) {
 	if key == "" {
 		return
 	}
-	resp, err := http.Get("https://sc.ftqq.com/" + key + ".send?text=" + url.QueryEscape(username + title))
+	resp, err := http.Get("https://sctapi.ftqq.com" + key + ".send?text=" + url.QueryEscape(username + title))
 	if err != nil {
 		fmt.Println(err.Error())
 		return
